@@ -1,0 +1,55 @@
+@use "../../../../styles/index" as *;
+
+.container {
+    @include container-style(30px 130px);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .menuContainer {
+        padding: 30px;
+        border: 1px solid rgb(236, 236, 236);
+
+        .startertext {
+            color: $btn-green;
+        }
+
+        .mainMenuDisplay {
+            margin-top: 30px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 40px;
+
+            .subTitleText {
+                text-align: left !important;
+                margin: 40px 0;
+            }
+
+            .cardDisplay {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    }
+}
+
+/* Responsive: Reduce padding */
+@media (max-width: 768px) {
+
+
+    .container {
+        @include container-style(30px 40px);
+
+        .mainMenuDisplay {
+
+            flex-direction: column;
+
+
+
+        }
+    }
+
+}

@@ -1,0 +1,46 @@
+@use "../../styles/index" as * ;
+
+.container{
+    @include container-style(130px 130px);
+    display: flex;
+    min-height: 500px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+
+    .smallTitle{
+        color: $orange;
+        font-weight: 500;
+    }
+    .description{
+        font-family: $font-mulish;
+        color: #FFFFFFE5;
+        line-height: 40px;
+        font-size: 30px;
+        font-weight: 800;
+    }
+  button {
+    text-transform: capitalize;
+  }
+}
+
+@media (max-width: 768px) {
+
+ .container{
+ @include container-style(60px 10px);
+    min-height: auto;
+
+    .smallTitle{
+      text-align: center;
+    }
+ 
+  .description{
+     
+        line-height: 30px;
+        font-size: 24px;
+        font-weight: 800;
+        text-align: center;
+    }
+
+}
+}

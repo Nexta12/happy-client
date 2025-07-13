@@ -1,0 +1,204 @@
+@use "../../../../styles/index" as * ;
+
+.container {
+    border: 1px solid #FAFAFA;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 30px;
+
+    .topSection{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+
+      .imgWrapper {
+        flex: 1;
+        height: 230px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FAFAFA;
+        overflow: hidden;
+        position: relative;
+
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        p{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      .textContent {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        small{
+              color: #959595;
+        }
+
+        .titleTop{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+          .titleLeft{
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            font-family: $font-mulish;
+          }
+          .price{
+            color: $orange;
+            font-weight: 700;
+          }
+        }
+
+        .recreation{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+
+          .content{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #959595;
+            font-family: $font-mulish;
+            font-size: 14px;
+
+            .contactPhone{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                font-size: 13px;
+            }
+          }
+        }
+        button {
+            width: 100% !important;
+            font-size: 14px;
+            border-radius: 1px;
+        }
+      }
+    }
+
+    .bottomSection{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+
+    .footerDetails{
+        border: 1px solid lightgray;
+        width: 100%;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        color: #959595;
+
+    }
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .container {
+        @include container-style(20px 20px);
+
+        margin-bottom: 20px;
+    .topSection{
+        display: flex;
+        flex-direction: column;
+
+      .imgWrapper {
+        flex: 1;
+        width: 100%;
+
+      }
+      .textContent {
+     
+
+        .titleTop{
+        
+
+          .titleLeft{
+           margin-top: 10px;
+
+            p{
+                font-size: 14px;
+                text-align: left !important;
+            }
+            small{
+              font-size: 10px;
+            }
+          }
+         
+        }
+
+        .recreation{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+
+          .content{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #959595;
+            font-family: $font-mulish;
+            font-size: 14px;
+
+            .contactPhone{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                font-size: 13px;
+            }
+          }
+        }
+        button {
+            width: 100% !important;
+            font-size: 14px;
+            border-radius: 1px;
+        }
+      }
+    }
+
+    .bottomSection{
+       margin-top: 10px;
+       align-items: stretch;
+
+    .footerDetails{
+        border: 1px solid lightgray;
+        width: 100%;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 8px;
+        color: #959595;
+
+    }
+    }
+
+    
+    }
+
+}

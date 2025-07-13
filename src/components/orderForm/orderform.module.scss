@@ -1,0 +1,36 @@
+@use "../../styles/index" as *;
+
+form {
+  .title {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: $font-mulish;
+    margin-bottom: 6px;
+  }
+
+  button {
+    font-size: 12px;
+    align-self: center;
+    
+  }
+
+  .formContent{
+   display: flex;
+   flex-direction: column;
+   gap: 6px;
+
+    .inputContainer{
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+  }
+}
+
+/* ===== MOBILE STYLES ===== */
+@media (max-width: 768px) {
+
+    .inputContainer{
+     flex-direction: column;
+    }
+}

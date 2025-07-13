@@ -1,0 +1,113 @@
+@use "../../../styles/index" as *;
+
+.container {
+    @include container-style(0px 130px);
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+
+    .imgWrapper {
+        width: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        height: 450px;
+        position: relative;
+
+        img {
+            width: inherit;
+            height: inherit;
+            object-fit: cover;
+        }
+
+        svg {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #fff;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+    }
+
+    .textContentWrapper {
+        width: inherit;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .title {
+            text-transform: capitalize;
+
+        }
+        .price{
+            color: $orange;
+            font-weight: 600;
+            font-size: 23px;
+        }
+
+        .actionBtns{
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            margin-top: 20px;
+
+
+
+            button:first-child{
+                background-color: $light-green;
+            }
+            button:last-child{
+                background-color: $orange;
+            }
+
+          button{
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            gap: 10px;
+            width: 100%;
+            border-radius: 3px;
+            cursor: pointer;
+
+            .btnContentRight{
+                display: flex;
+                flex-direction: column;
+                justify-content: left;
+                text-align: left;
+                font-size: 13px;
+                text-transform: capitalize;
+            }
+          }
+
+        }
+    }
+
+}
+
+
+/* Responsive: Reduce padding */
+@media (max-width: 768px) {
+
+    .container {
+        @include container-style(0px 20px);
+      padding-bottom: 30px;
+
+
+      
+    .imgWrapper {
+       
+        height: 350px;
+
+
+    }
+    
+    }
+
+}
