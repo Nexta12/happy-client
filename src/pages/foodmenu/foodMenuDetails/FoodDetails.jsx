@@ -84,7 +84,7 @@ const FoodDetails = () => {
         </div>
       </div>
       <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
-        <OrderForm />
+       <OrderForm onSuccess={() => setModalOpen(false)} />
       </Modal>
     </>
   );

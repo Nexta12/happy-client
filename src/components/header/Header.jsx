@@ -107,7 +107,7 @@ const Header = () => {
       </section>
 
       <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
-        <OrderForm/>
+        <OrderForm onSuccess={() => setModalOpen(false)} />
       </Modal>
 
     </>
