@@ -23,4 +23,8 @@ export default defineConfig({
 
     },
   },
+   preview: {
+    port: 3301,
+    allowedHosts: ['happies.dataactions.com']
+  },
 })
