@@ -52,7 +52,7 @@ const OrderForm = ({ hall = false , onSuccess }) => {
       });
 
        if (onSuccess) {
-        setTimeout(onSuccess, 500);
+        setTimeout(onSuccess, 4000);
       }
 
     } catch (error) {
