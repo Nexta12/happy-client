@@ -60,33 +60,44 @@ jobs:
               echo "Failed to change directory as required by me"
               exit 1
             fi
+            
             # echo "Reseting Local Changes"
             #   if ! git reset --hard; then
             #       echo "Failed to reset local changes"
             #       exit 1;
             #   fi
+
             echo "Pulling latest code from origin/main"
             if ! git pull origin main; then
               echo "Failed to pull latest code"
               exit 1
             fi
+
             # echo "Removing every built files and cache"
             # if ! npm run cleanup; then
             #     echo "Couldn't run cleanups"
             #     exit 1
             # fi
+
             echo "Installing dependencies"
             if ! npm install; then
               echo "Couldn't install packages"
               exit 1
             fi
+
+            echo "Cleaning old build folder"
+            if ! rm -rf /www/wwwroot/client/happies/dist; then
+            echo "Failed to clean the dist folder"
+            exit 1
+            fi
+
             echo "Building for production "
             if ! npm run build; then
               echo "Couldn't rebuild application"
               exit 1
             fi
             echo "Start Production server with pm2"
-            if ! npm run start; then
+            if ! npm run star; then
               echo "Couldn't Start production with pm2"
               exit 1
             fi
