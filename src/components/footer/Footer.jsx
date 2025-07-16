@@ -16,7 +16,7 @@ const Footer = () => {
         </Link>
 
         <p>
-          40, floor, Queenslad Victoria Building.
+          20, floor, Queenslad Victoria Building.
           <br /> 60 california street california USA
         </p>
 
