@@ -60,7 +60,7 @@ jobs:
               echo "Failed to change directory as required by me"
               exit 1
             fi
-            
+
             # echo "Reseting Local Changes"
             #   if ! git reset --hard; then
             #       echo "Failed to reset local changes"
@@ -97,7 +97,7 @@ jobs:
               exit 1
             fi
             echo "Start Production server with pm2"
-            if ! npm run star; then
+            if ! npm run start; then
               echo "Couldn't Start production with pm2"
               exit 1
             fi
