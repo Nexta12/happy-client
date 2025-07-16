@@ -84,7 +84,10 @@ const FoodDetails = () => {
         </div>
       </div>
       <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
-       <OrderForm onSuccess={() => setModalOpen(false)} />
+        <OrderForm
+          onSuccess={() => setModalOpen(false)}
+          defaultChoice={foodDetails?.title}
+        />
       </Modal>
     </>
   );

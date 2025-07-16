@@ -10,7 +10,7 @@ import { apiClient } from "@api/apiClient";
 import { endpoints } from "@api/endpoints";
 import { toast, ToastContainer } from "react-toastify";
 
-const OrderForm = ({ hall = false , onSuccess }) => {
+const OrderForm = ({ hall = false , onSuccess, defaultChoice = ""}) => {
   const [loading, setLoading] = useState(false);
 
   const [formDetails, setFormDetails] = useState({
@@ -18,7 +18,7 @@ const OrderForm = ({ hall = false , onSuccess }) => {
     email: "",
     address: "",
     phone: "",
-    choice: "",
+    choice: defaultChoice,
     comment: "",
   });
 

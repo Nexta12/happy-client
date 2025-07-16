@@ -177,7 +177,7 @@ const HallDetails = () => {
         </div>
       </div>
       <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
-         <OrderForm hall={true}  onSuccess={() => setModalOpen(false)} />
+         <OrderForm hall={true}  onSuccess={() => setModalOpen(false)}  defaultChoice={currentHall.title} />
       </Modal>
     </>
   );
